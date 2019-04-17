@@ -210,7 +210,7 @@ def draw_averages (taxon_info, ax):
 	ax.set_yscale('log')
 	ax.set_xlim(min(xs)/1.5, max(xs)*6)
 	ax.set_ylim(min(ys)/1.5, max(ys)*1.8)
-	ax.set_xlabel("RNA:DNA coverage ratio", fontsize=label_font)
+	ax.set_xlabel("RNA:DNA representation ratio", fontsize=label_font)
 	if "T17_Micromonas_55_7" not in taxon_info:
 		ax.set_ylabel("Average DNA coverage of contigs (CPM)", fontsize=label_font)
 	ax.spines['right'].set_visible(False)
@@ -276,9 +276,9 @@ axis_font=8
 label_font=10
 heading_font=16
 
-scheme = {      "Euryarchaeota":        "gold",
+scheme = {      "Euryarchaeota":        "white",
 		"Nanoarchaeota":        "blue",
-                "Proteobacteria":       "m",
+                "Proteobacteria":       "orange",
                 "Bacteroidetes":        "g",
                 "Cyanobacteria":        "r",
                 "Actinobacteria":       "c",

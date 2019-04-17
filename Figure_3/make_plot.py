@@ -220,7 +220,7 @@ mag_rna_data = get_mag_abundance(rna_data, mags)
 ##################   DRAW CONTIG PLOTS   ######################
 print "plotting A..."
 ax1 = fig.add_axes([0.1, 0.57, 0.37, 0.37])
-plot_contigs(dna_data, rna_data, 1000, ax1, alpha=0.05)
+plot_contigs(dna_data, rna_data, 10000, ax1, alpha=0.01)
 
 print "plotting B..."
 ax2 = fig.add_axes([0.57, 0.57, 0.37, 0.37])
