@@ -109,7 +109,7 @@ def get_pathway_ratios(filename, dna_df, rna_df, taxonomy, toi):
 		gene_id = cut[1]
 		gene_name = cut[2]
 		if "potassium uptake" in gene_name:
-			cut[4] = "Cellular Processes;Potassium Uptake;All----------------------------------------------------"
+			cut[4] = "Metabolism;Energy metabolism;Opsins"
 		contig = gene.split("-")[0]
 		if cut[4]=="NA":
 			continue
@@ -182,7 +182,7 @@ def get_ratios(df):
 				ratio=0
 			else:
 				ratio=rna/dna
-			out[sample][path] = ratio
+			out[sample][';'.join(path.split(';')[1:])] = ratio
 	return pd.DataFrame.from_dict(out)
 	
 
@@ -246,11 +246,11 @@ def get_top_pathways(df, n):
 	# leave only top pathways
 	rankings = []
 	for index, row in df.iterrows():
-	        rankings.append(sum(row))
+	        rankings.append(max(row))
 	rankings.sort(reverse=True)
 
 	for index, row in df.iterrows():
-	        if sum(row)<rankings[n]:
+	        if max(row)<rankings[n]:
 	                df = df.drop([index])
 	return df
 
@@ -300,7 +300,6 @@ if "recalc" in sys.argv:
 else:
 	df = pd.read_pickle("pathway_df.pkl")
 
-
 ##################   PROCESS HEATMAP MATRIX  ######################
 print "processing matrix..."
 df = collapse_paths(df)
@@ -310,14 +309,11 @@ df = df.div(df.sum(axis=0), axis=1)
 df = get_ratios(df)
 
 
-
 # standardize by sample ratio total
 df = 10*df.div(df.sum(axis=0), axis=1)
 
 # get top pathways
 df = get_top_pathways(df, 30)
-
-
 
 
 

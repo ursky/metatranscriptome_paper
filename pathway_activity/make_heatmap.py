@@ -95,7 +95,7 @@ def drop_incomplete_paths(pathways, pathway_counts):
 	print "min gene count per pathway = "+str(min_count)
 	for path in pathway_counts:
 		count = pathway_counts[path]
-		if count<min_count:
+		if count<min_count and "Opsin" not in path:
 			for sample in pathways:
 				pathways[sample].pop(path)
 	return pathways
@@ -121,7 +121,10 @@ def get_pathways(filename, dna_df, rna_df, taxonomy, taxon="All"):
 		if cut[3]=="NA":
 			continue
 		gene = cut[0]
+		gene_name = cut[2]
 		contig = gene.split("-")[0]
+		if "opsin" in gene_name:
+			cut[4]="Metabolism;Energy metabolism;Opsins"
 		if cut[4]=="NA":
 			continue
 		paths = cut[4].split("|")
@@ -135,7 +138,6 @@ def get_pathways(filename, dna_df, rna_df, taxonomy, taxon="All"):
 			taxa=taxonomy[contig]
 			if taxon not in taxa:
 				continue
-		
 		for path in paths:
 			if "Global" in path:
 				continue 
@@ -221,12 +223,13 @@ else:
 
 
 ##################   MAKE FUNCTIONAL TABLE   ######################
+print "computing pathway table..."
 if len(sys.argv)>1:
-	print "computing pathway table..."
 	pathway_df = get_pathways("img_annotation.master", dna_df, rna_df, taxonomy, taxon=sys.argv[1])
 	df = collapse_paths(pathway_df)
 	pathway_df.to_pickle("pathway_df.pkl")
 else:
+	pathway_df = get_pathways("img_annotation.master", dna_df, rna_df, taxonomy, taxon="All")
 	pathway_df = pd.read_pickle("pathway_df.pkl")
 	df = collapse_paths(pathway_df)
 
@@ -236,7 +239,6 @@ print "processing matrix..."
 for index, row in df.iterrows():
 	if sum(row)<100:
 		df = df.drop([index])
-
 # log standardize
 #df += 1
 #df = df.apply(np.log)
@@ -271,29 +273,25 @@ for sample in df.columns.values:
         #if "DNA" in sample:
         #       df = df.drop([sample], axis=1)
         #       continue
-        if "DNA" in sample and "AM" in sample:
-                c="red"
-        elif "DNA" in sample and "PM" in sample:
-                c="red"
-        elif "RNA" in sample and "AM" in sample:
+        if "DNA" in sample:
                 c="blue"
-        elif "RNA" in sample and "PM" in sample:
-                c="blue"
+        elif "RNA" in sample:
+                c="red"
         else:
                 c="w"
         lut.append(c)
 
-
 print df.shape
-g = sns.clustermap(df, figsize=(6,8), col_colors=lut, col_cluster=True, row_cluster=True, yticklabels=True, xticklabels=True, cmap="magma", method="weighted")
+g = sns.clustermap(df, figsize=(5,8), col_colors=lut, col_cluster=True, row_cluster=True, yticklabels=True, xticklabels=True, cmap="magma", method="weighted")
 
 
 #plt.savefig("figure_4.png", bbox_inches='tight', dpi=300)
 if len(sys.argv)>1:
 	g.fig.suptitle(sys.argv[1], fontsize=40)
 	plt.savefig(sys.argv[1]+".png", bbox_inches='tight', dpi=300)
-else:
-	plt.savefig("figure.png", bbox_inches='tight', dpi=300)
+plt.savefig("figure.png", bbox_inches='tight', dpi=300)
+
+
 
 
 

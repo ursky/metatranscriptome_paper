@@ -1,0 +1,117 @@
+CHLO-1	Prodigal:2.6	CDS	366	1442	.	+	0	ID=PROKKA_00001;eC_number=6.6.1.1;gene=bchI;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P26239;locus_tag=PROKKA_00001;product=Magnesium-chelatase 38 kDa subunit
+CHLO-1	Prodigal:2.6	CDS	1460	2026	.	+	0	ID=PROKKA_00002;gene=rpsD;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P80373;locus_tag=PROKKA_00002;product=30S ribosomal protein S4
+CHLO-1	Prodigal:2.6	CDS	2053	2301	.	+	0	ID=PROKKA_00003;gene=infA;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P20458;locus_tag=PROKKA_00003;product=Translation initiation factor IF-1
+CHLO-1	Prodigal:2.6	CDS	2267	2839	.	+	0	ID=PROKKA_00004;gene=rpsH;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P12879;locus_tag=PROKKA_00004;product=30S ribosomal protein S8
+CHLO-1	Prodigal:2.6	CDS	2905	3285	.	+	0	ID=PROKKA_00005;gene=rpsK;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P66357;locus_tag=PROKKA_00005;product=30S ribosomal protein S11
+CHLO-1	Aragorn:1.2	tRNA	3874	3946	.	+	0	ID=PROKKA_00006;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00006;product=tRNA-His(gtg)
+CHLO-1	Aragorn:1.2	tRNA	4232	4304	.	+	0	ID=PROKKA_00007;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00007;product=tRNA-Glu(ttc)
+CHLO-1	Aragorn:1.2	tRNA	4314	4386	.	+	0	ID=PROKKA_00008;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00008;product=tRNA-Val(tac)
+CHLO-1	Prodigal:2.6	CDS	4651	6102	.	+	0	ID=PROKKA_00009;eC_number=3.6.3.14;gene=atpD;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q8DLG8;locus_tag=PROKKA_00009;product=ATP synthase subunit beta
+CHLO-1	Prodigal:2.6	CDS	6218	6616	.	+	0	ID=PROKKA_00010;gene=atpC;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P26533;locus_tag=PROKKA_00010;product=ATP synthase epsilon chain
+CHLO-1	Aragorn:1.2	tRNA	6683	6754	.	+	0	ID=PROKKA_00011;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00011;product=tRNA-Met(cat)
+CHLO-1	Prodigal:2.6	CDS	6866	7573	.	+	0	ID=PROKKA_00012;gene=atpB;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q2RFX3;locus_tag=PROKKA_00012;product=ATP synthase subunit a
+CHLO-1	Prodigal:2.6	CDS	7655	7903	.	+	0	ID=PROKKA_00013;gene=atpE;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q8DLP7;locus_tag=PROKKA_00013;product=ATP synthase subunit c
+CHLO-1	Prodigal:2.6	CDS	7917	8405	.	+	0	ID=PROKKA_00014;gene=atpF;inference=ab initio prediction:Prodigal:2.6,protein motif:HAMAP:MF_01398;locus_tag=PROKKA_00014;product=ATP synthase subunit b
+CHLO-1	Prodigal:2.6	CDS	8409	9920	.	+	0	ID=PROKKA_00015;eC_number=3.6.3.14;gene=atpA;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q05372;locus_tag=PROKKA_00015;product=ATP synthase subunit alpha
+CHLO-1	Prodigal:2.6	CDS	9966	10067	.	+	0	ID=PROKKA_00016;gene=ycf12;inference=ab initio prediction:Prodigal:2.6,protein motif:HAMAP:MF_01329;locus_tag=PROKKA_00016;product=Photosystem II reaction center protein Ycf12
+CHLO-1	Prodigal:2.6	CDS	10122	10262	.	+	0	ID=PROKKA_00017;gene=psbK;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q9F1K9;locus_tag=PROKKA_00017;product=Photosystem II reaction center protein K precursor
+CHLO-1	Aragorn:1.2	tRNA	10509	10581	.	+	0	ID=PROKKA_00018;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00018;product=tRNA-Asn(gtt)
+CHLO-1	Prodigal:2.6	CDS	10812	11081	.	+	0	ID=PROKKA_00019;gene=rplW;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P04454;locus_tag=PROKKA_00019;product=50S ribosomal protein L23
+CHLO-1	Prodigal:2.6	CDS	11183	11941	.	+	0	ID=PROKKA_00020;gene=rplB;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P60432;locus_tag=PROKKA_00020;product=50S ribosomal protein L2
+CHLO-1	Prodigal:2.6	CDS	11971	12237	.	+	0	ID=PROKKA_00021;gene=rpsS;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P12731;locus_tag=PROKKA_00021;product=30S ribosomal protein S19
+CHLO-1	Prodigal:2.6	CDS	12322	13053	.	+	0	ID=PROKKA_00022;gene=rpsC;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P73314;locus_tag=PROKKA_00022;product=30S ribosomal protein S3
+CHLO-1	Prodigal:2.6	CDS	13210	13656	.	+	0	ID=PROKKA_00023;gene=rplP;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q6N4U1;locus_tag=PROKKA_00023;product=50S ribosomal protein L16
+CHLO-1	Prodigal:2.6	CDS	13619	13987	.	+	0	ID=PROKKA_00024;gene=rplN;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P73310;locus_tag=PROKKA_00024;product=50S ribosomal protein L14
+CHLO-1	Prodigal:2.6	CDS	14710	15942	.	+	0	ID=PROKKA_00025;gene=tuf;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q8YP63;locus_tag=PROKKA_00025;product=Elongation factor Tu
+CHLO-1	barrnap:0.9	rRNA	16048	17503	0	+	.	ID=PROKKA_00026;locus_tag=PROKKA_00026;product=16S ribosomal RNA
+CHLO-1	Aragorn:1.2	tRNA	17560	17633	.	+	0	ID=PROKKA_00027;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00027;product=tRNA-Ile(gat)
+CHLO-1	Aragorn:1.2	tRNA	17647	17721	.	+	0	ID=PROKKA_00028;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00028;product=tRNA-Ala(tgc)
+CHLO-1	barrnap:0.9	rRNA	17773	19229	2.2e-286	+	.	ID=PROKKA_00029;locus_tag=PROKKA_00029;note=aligned only 45 percent of the 23S ribosomal RNA;product=23S ribosomal RNA (partial)
+CHLO-1	barrnap:0.9	rRNA	19238	21709	0	+	.	ID=PROKKA_00030;locus_tag=PROKKA_00030;note=aligned only 76 percent of the 23S ribosomal RNA;product=23S ribosomal RNA (partial)
+CHLO-1	Aragorn:1.2	tRNA	21974	22058	.	+	0	ID=PROKKA_00031;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00031;product=tRNA-Leu(taa)
+CHLO-1	Prodigal:2.6	CDS	22150	22899	.	+	0	ID=PROKKA_00032;gene=rpsB;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:A6U8K2;locus_tag=PROKKA_00032;product=30S ribosomal protein S2
+CHLO-1	Prodigal:2.6	CDS	23095	23208	.	+	0	ID=PROKKA_00033;gene=rpmJ;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P80256;locus_tag=PROKKA_00033;product=50S ribosomal protein L36
+CHLO-1	Prodigal:2.6	CDS	23210	24913	.	+	0	ID=PROKKA_00034;eC_number=6.3.4.19;gene=tilS;inference=ab initio prediction:Prodigal:2.6,protein motif:HAMAP:MF_01161;locus_tag=PROKKA_00034;product=tRNA(Ile)-lysidine synthase
+CHLO-1	Prodigal:2.6	CDS	24910	25107	.	-	0	ID=PROKKA_00035;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00035;product=hypothetical protein
+CHLO-1	Prodigal:2.6	CDS	25118	25501	.	+	0	ID=PROKKA_00036;gene=rpsL;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P0A4A5;locus_tag=PROKKA_00036;product=30S ribosomal protein S12
+CHLO-1	Prodigal:2.6	CDS	25511	25996	.	+	0	ID=PROKKA_00037;gene=rpsG;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P0A2B3;locus_tag=PROKKA_00037;product=30S ribosomal protein S7
+CHLO-1	Prodigal:2.6	CDS	26214	26312	.	+	0	ID=PROKKA_00038;gene=psaM;inference=ab initio prediction:Prodigal:2.6,protein motif:HAMAP:MF_00828;locus_tag=PROKKA_00038;product=Photosystem I reaction center subunit XII
+CHLO-1	Aragorn:1.2	tRNA	26360	26435	.	+	0	ID=PROKKA_00039;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00039;product=tRNA-Arg(acg)
+CHLO-1	Aragorn:1.2	tRNA	26457	26531	.	+	0	ID=PROKKA_00040;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00040;product=tRNA-Trp(cca)
+CHLO-1	Prodigal:2.6	CDS	26942	27526	.	+	0	ID=PROKKA_00041;gene=ccsA;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P72978;locus_tag=PROKKA_00041;product=Cytochrome c biogenesis protein CcsA
+CHLO-1	Prodigal:2.6	CDS	27563	28153	.	+	0	ID=PROKKA_00042;eC_number=3.4.21.92;gene=clpP;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P63786;locus_tag=PROKKA_00042;product=ATP-dependent Clp protease proteolytic subunit
+CHLO-1	Prodigal:2.6	CDS	28325	29851	.	+	0	ID=PROKKA_00043;gene=psbC_1;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P09193;locus_tag=PROKKA_00043;product=Photosystem II 44 kDa reaction center protein
+CHLO-1	Prodigal:2.6	CDS	29867	29962	.	+	0	ID=PROKKA_00044;gene=psbT;inference=ab initio prediction:Prodigal:2.6,protein motif:HAMAP:MF_00808;locus_tag=PROKKA_00044;product=Photosystem II reaction center protein T
+CHLO-1	Prodigal:2.6	CDS	30220	30450	.	+	0	ID=PROKKA_00045;gene=psbH;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q8DJ43;locus_tag=PROKKA_00045;product=Photosystem II reaction center protein H
+CHLO-1	Aragorn:1.2	tRNA	30578	30664	.	+	0	ID=PROKKA_00046;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00046;product=tRNA-Ser(tga)
+CHLO-1	Aragorn:1.2	tRNA	30770	30845	.	+	0	ID=PROKKA_00047;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00047;product=tRNA-Asp(gtc)
+CHLO-1	Aragorn:1.2	tRNA	30877	30948	.	+	0	ID=PROKKA_00048;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00048;product=tRNA-Arg(tct)
+CHLO-1	Prodigal:2.6	CDS	31105	32043	.	+	0	ID=PROKKA_00049;gene=petA;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P95522;locus_tag=PROKKA_00049;product=Apocytochrome f precursor
+CHLO-1	Prodigal:2.6	CDS	32128	32319	.	+	0	ID=PROKKA_00050;gene=rpsR;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q5SLQ0;locus_tag=PROKKA_00050;product=30S ribosomal protein S18
+CHLO-1	Prodigal:2.6	CDS	34440	35462	.	+	0	ID=PROKKA_00051;eC_number=2.7.7.6;gene=rpoC_1;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:A8HTZ1;locus_tag=PROKKA_00051;product=DNA-directed RNA polymerase subunit beta'
+CHLO-1	Aragorn:1.2	tRNA	35674	35759	.	+	0	ID=PROKKA_00052;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00052;product=tRNA-Met(cat)
+CHLO-1	Prodigal:2.6	CDS	35831	36073	.	+	0	ID=PROKKA_00053;gene=psbE;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P12238;locus_tag=PROKKA_00053;product=Cytochrome b559 subunit alpha
+CHLO-1	Prodigal:2.6	CDS	36126	36251	.	+	0	ID=PROKKA_00054;gene=psbF;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P12239;locus_tag=PROKKA_00054;product=Cytochrome b559 subunit beta
+CHLO-1	Prodigal:2.6	CDS	36449	36571	.	+	0	ID=PROKKA_00055;gene=psbJ;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q7DGD4;locus_tag=PROKKA_00055;product=Photosystem II reaction center protein J
+CHLO-1	Prodigal:2.6	CDS	36651	36839	.	+	0	ID=PROKKA_00056;gene=psbZ;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:D0VWR5;locus_tag=PROKKA_00056;product=Photosystem II reaction center protein Z
+CHLO-1	Prodigal:2.6	CDS	36869	36985	.	+	0	ID=PROKKA_00057;gene=petG;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P58246;locus_tag=PROKKA_00057;product=Cytochrome b6-f complex subunit 5
+CHLO-1	Aragorn:1.2	tRNA	37132	37202	.	+	0	ID=PROKKA_00058;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00058;product=tRNA-Gly(tcc)
+CHLO-1	Aragorn:1.2	tRNA	37335	37409	.	-	0	ID=PROKKA_00059;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00059;product=tRNA-Lys(ttt)
+CHLO-1	Prodigal:2.6	CDS	37541	38968	.	-	0	ID=PROKKA_00060;eC_number=4.1.1.39;gene=cbbL;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P00879;locus_tag=PROKKA_00060;product=Ribulose bisphosphate carboxylase large chain
+CHLO-1	Aragorn:1.2	tRNA	39046	39117	.	-	0	ID=PROKKA_00061;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00061;product=tRNA-Phe(gaa)
+CHLO-1	Aragorn:1.2	tRNA	39229	39301	.	-	0	ID=PROKKA_00062;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00062;product=tRNA-Thr(tgt)
+CHLO-1	Aragorn:1.2	tRNA	39332	39414	.	-	0	ID=PROKKA_00063;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00063;product=tRNA-Tyr(gta)
+CHLO-1	Aragorn:1.2	tRNA	39438	39511	.	-	0	ID=PROKKA_00064;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00064;product=tRNA-Pro(tgg)
+CHLO-1	Aragorn:1.2	tRNA	39527	39598	.	-	0	ID=PROKKA_00065;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00065;product=tRNA-Gln(ttg)
+CHLO-1	Prodigal:2.6	CDS	39762	40007	.	-	0	ID=PROKKA_00066;eC_number=1.97.1.12;gene=psaC;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P0A412;locus_tag=PROKKA_00066;product=Photosystem I iron-sulfur center
+CHLO-1	Prodigal:2.6	CDS	40066	40581	.	-	0	ID=PROKKA_00067;gene=ycf3;inference=ab initio prediction:Prodigal:2.6,protein motif:HAMAP:MF_00439;locus_tag=PROKKA_00067;product=Photosystem I assembly protein Ycf3
+CHLO-1	Aragorn:1.2	tRNA	40627	40697	.	-	0	ID=PROKKA_00068;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00068;product=tRNA-Gly(gcc)
+CHLO-1	Prodigal:2.6	CDS	40815	41297	.	-	0	ID=PROKKA_00069;gene=petD;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P83792;locus_tag=PROKKA_00069;product=Cytochrome b6-f complex subunit 4
+CHLO-1	Prodigal:2.6	CDS	41381	42028	.	-	0	ID=PROKKA_00070;gene=petB;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P83791;locus_tag=PROKKA_00070;product=Cytochrome b6
+CHLO-1	Prodigal:2.6	CDS	42278	43078	.	+	0	ID=PROKKA_00071;gene=minD;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q01464;locus_tag=PROKKA_00071;product=Septum site-determining protein MinD
+CHLO-1	Aragorn:1.2	tRNA	43116	43202	.	-	0	ID=PROKKA_00072;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00072;product=tRNA-Ser(gct)
+CHLO-1	Aragorn:1.2	tRNA	43215	43295	.	-	0	ID=PROKKA_00073;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00073;product=tRNA-Leu(tag)
+CHLO-1	Prodigal:2.6	CDS	43332	44717	.	-	0	ID=PROKKA_00074;gene=psbC_2;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P09193;locus_tag=PROKKA_00074;product=Photosystem II 44 kDa reaction center protein
+CHLO-1	Prodigal:2.6	CDS	44701	45759	.	-	0	ID=PROKKA_00075;eC_number=1.10.3.9;gene=psbD1;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q8CM25;locus_tag=PROKKA_00075;product=Photosystem II D2 protein
+CHLO-1	Prodigal:2.6	CDS	46281	48524	.	-	0	ID=PROKKA_00076;eC_number=1.97.1.12;gene=psaB;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P29255;locus_tag=PROKKA_00076;product=Photosystem I P700 chlorophyll a apoprotein A2
+CHLO-1	Prodigal:2.6	CDS	48557	50809	.	-	0	ID=PROKKA_00077;eC_number=1.97.1.12;gene=psaA;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P0A405;locus_tag=PROKKA_00077;product=Photosystem I P700 chlorophyll a apoprotein A1
+CHLO-1	Aragorn:1.2	tRNA	51343	51416	.	+	0	ID=PROKKA_00078;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00078;product=tRNA-Met(cat)
+CHLO-1	Prodigal:2.6	CDS	51746	52000	.	+	0	ID=PROKKA_00079;gene=rplT;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P78023;locus_tag=PROKKA_00079;product=50S ribosomal protein L20
+CHLO-1	Prodigal:2.6	CDS	52131	52475	.	+	0	ID=PROKKA_00080;gene=rpsN;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P0AG59;locus_tag=PROKKA_00080;product=30S ribosomal protein S14
+CHLO-1	Aragorn:1.2	tRNA	52561	52631	.	-	0	ID=PROKKA_00081;inference=COORDINATES:profile:Aragorn:1.2;locus_tag=PROKKA_00081;product=tRNA-Cys(gca)
+CHLO-1	Prodigal:2.6	CDS	52929	56291	.	+	0	ID=PROKKA_00082;eC_number=2.7.7.6;gene=rpoB_1;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P0A8V2;locus_tag=PROKKA_00082;product=DNA-directed RNA polymerase subunit beta
+CHLO-1	Prodigal:2.6	CDS	56409	57692	.	+	0	ID=PROKKA_00083;eC_number=2.7.7.6;gene=rpoB_2;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q8RQE9;locus_tag=PROKKA_00083;product=DNA-directed RNA polymerase subunit beta
+CHLO-1	Prodigal:2.6	CDS	57717	61415	.	+	0	ID=PROKKA_00084;eC_number=2.7.7.6;gene=rpoC_2;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P0A674;locus_tag=PROKKA_00084;product=DNA-directed RNA polymerase subunit beta'
+CHLO-1	Prodigal:2.6	CDS	61445	62572	.	+	0	ID=PROKKA_00085;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00085;product=hypothetical protein
+CHLO-1	Prodigal:2.6	CDS	62601	63425	.	+	0	ID=PROKKA_00086;eC_number=2.7.7.6;gene=rpoA;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P20429;locus_tag=PROKKA_00086;product=DNA-directed RNA polymerase subunit alpha
+CHLO-1	Prodigal:2.6	CDS	63607	64497	.	-	0	ID=PROKKA_00087;eC_number=1.10.3.9;gene=psbA1;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P04996;locus_tag=PROKKA_00087;product=Photosystem Q(B) protein 1 precursor
+CHLO-2	Prodigal:2.6	CDS	43	231	.	+	0	ID=PROKKA_00088;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00088;product=hypothetical protein
+CHLO-2	Prodigal:2.6	CDS	369	737	.	+	0	ID=PROKKA_00089;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00089;product=hypothetical protein
+CHLO-2	Prodigal:2.6	CDS	769	1194	.	-	0	ID=PROKKA_00090;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00090;product=hypothetical protein
+CHLO-2	Prodigal:2.6	CDS	1422	2867	.	-	0	ID=PROKKA_00091;eC_number=5.4.2.10;gene=glmM;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P99087;locus_tag=PROKKA_00091;product=Phosphoglucosamine mutase
+CHLO-2	Prodigal:2.6	CDS	3085	3384	.	-	0	ID=PROKKA_00092;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00092;product=hypothetical protein
+CHLO-2	Prodigal:2.6	CDS	3395	3991	.	-	0	ID=PROKKA_00093;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00093;product=hypothetical protein
+CHLO-2	Prodigal:2.6	CDS	4121	4345	.	-	0	ID=PROKKA_00094;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00094;product=hypothetical protein
+CHLO-2	Prodigal:2.6	CDS	4808	6073	.	+	0	ID=PROKKA_00095;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00095;product=hypothetical protein
+CHLO-2	Prodigal:2.6	CDS	6286	7386	.	-	0	ID=PROKKA_00096;eC_number=3.1.4.17;gene=cpdA;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q8YLG0;locus_tag=PROKKA_00096;product=3'%2C5'-cyclic adenosine monophosphate phosphodiesterase CpdA
+CHLO-2	Prodigal:2.6	CDS	7520	8284	.	+	0	ID=PROKKA_00097;eC_number=2.1.1.33;gene=trmB;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P44648;locus_tag=PROKKA_00097;product=tRNA (guanine-N(7)-)-methyltransferase
+CHLO-2	Prodigal:2.6	CDS	8292	9164	.	-	0	ID=PROKKA_00098;eC_number=2.4.2.19;gene=nadC;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P39666;locus_tag=PROKKA_00098;product=putative nicotinate-nucleotide pyrophosphorylase [carboxylating]
+CHLO-3	Prodigal:2.6	CDS	1174	2706	.	-	0	ID=PROKKA_00099;eC_number=4.1.3.27;gene=trpE;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P20580;locus_tag=PROKKA_00099;product=Anthranilate synthase component 1
+CHLO-3	Prodigal:2.6	CDS	2784	3212	.	-	0	ID=PROKKA_00100;gene=psaD;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P23076;locus_tag=PROKKA_00100;product=Photosystem I reaction center subunit II
+CHLO-3	Prodigal:2.6	CDS	3497	3988	.	+	0	ID=PROKKA_00101;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00101;product=hypothetical protein
+CHLO-3	Prodigal:2.6	CDS	4051	4542	.	+	0	ID=PROKKA_00102;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00102;product=hypothetical protein
+CHLO-3	Prodigal:2.6	CDS	4546	5880	.	-	0	ID=PROKKA_00103;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00103;product=hypothetical protein
+CHLO-3	barrnap:0.9	rRNA	6047	6156	4.3e-07	-	.	ID=PROKKA_00104;locus_tag=PROKKA_00104;product=5S ribosomal RNA
+CHLO-4	Prodigal:2.6	CDS	98	1114	.	-	0	ID=PROKKA_00105;gene=cbpA;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P36659;locus_tag=PROKKA_00105;product=Curved DNA-binding protein
+CHLO-4	Prodigal:2.6	CDS	1213	3198	.	-	0	ID=PROKKA_00106;gene=dnaK2;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P22358;locus_tag=PROKKA_00106;product=Chaperone protein dnaK2
+CHLO-4	Prodigal:2.6	CDS	3327	4121	.	-	0	ID=PROKKA_00107;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00107;product=hypothetical protein
+CHLO-5	Prodigal:2.6	CDS	198	629	.	+	0	ID=PROKKA_00108;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00108;product=hypothetical protein
+CHLO-5	Prodigal:2.6	CDS	677	1006	.	+	0	ID=PROKKA_00109;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00109;product=hypothetical protein
+CHLO-5	Prodigal:2.6	CDS	992	1150	.	-	0	ID=PROKKA_00110;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00110;product=hypothetical protein
+CHLO-5	Prodigal:2.6	CDS	1303	2196	.	-	0	ID=PROKKA_00111;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00111;product=hypothetical protein
+CHLO-5	Prodigal:2.6	CDS	2202	2414	.	-	0	ID=PROKKA_00112;inference=ab initio prediction:Prodigal:2.6;locus_tag=PROKKA_00112;product=hypothetical protein
+CHLO-5	barrnap:0.9	rRNA	2665	2775	7.2e-11	-	.	ID=PROKKA_00113;locus_tag=PROKKA_00113;product=5S ribosomal RNA
+CHLO-6	Prodigal:2.6	CDS	21	1187	.	+	0	ID=PROKKA_00114;eC_number=6.1.1.14;gene=glyQ;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q9WY59;locus_tag=PROKKA_00114;product=Glycine--tRNA ligase alpha subunit
+CHLO-6	Prodigal:2.6	CDS	2330	2494	.	+	0	ID=PROKKA_00115;gene=kaiA;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:Q6L8K1;locus_tag=PROKKA_00115;product=Circadian clock protein KaiA
+CHLO-7	barrnap:0.9	rRNA	1	1565	0	+	.	ID=PROKKA_00116;locus_tag=PROKKA_00116;note=aligned only 48 percent of the 23S ribosomal RNA;product=23S ribosomal RNA (partial)
+CHLO-8	barrnap:0.9	rRNA	1	1562	0	-	.	ID=PROKKA_00117;locus_tag=PROKKA_00117;note=aligned only 48 percent of the 23S ribosomal RNA;product=23S ribosomal RNA (partial)

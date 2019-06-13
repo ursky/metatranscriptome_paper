@@ -1,0 +1,634 @@
+>Feature CHLO-1
+366	1442	CDS
+			EC_number	6.6.1.1
+			gene	bchI
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P26239
+			locus_tag	PROKKA_00001
+			product	Magnesium-chelatase 38 kDa subunit
+1460	2026	CDS
+			gene	rpsD
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P80373
+			locus_tag	PROKKA_00002
+			product	30S ribosomal protein S4
+2053	2301	CDS
+			gene	infA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P20458
+			locus_tag	PROKKA_00003
+			product	Translation initiation factor IF-1
+2267	2839	CDS
+			gene	rpsH
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P12879
+			locus_tag	PROKKA_00004
+			product	30S ribosomal protein S8
+2905	3285	CDS
+			gene	rpsK
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P66357
+			locus_tag	PROKKA_00005
+			product	30S ribosomal protein S11
+3874	3946	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00006
+			product	tRNA-His(gtg)
+4232	4304	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00007
+			product	tRNA-Glu(ttc)
+4314	4386	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00008
+			product	tRNA-Val(tac)
+4651	6102	CDS
+			EC_number	3.6.3.14
+			gene	atpD
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q8DLG8
+			locus_tag	PROKKA_00009
+			product	ATP synthase subunit beta
+6218	6616	CDS
+			gene	atpC
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P26533
+			locus_tag	PROKKA_00010
+			product	ATP synthase epsilon chain
+6683	6754	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00011
+			product	tRNA-Met(cat)
+6866	7573	CDS
+			gene	atpB
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q2RFX3
+			locus_tag	PROKKA_00012
+			product	ATP synthase subunit a
+7655	7903	CDS
+			gene	atpE
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q8DLP7
+			locus_tag	PROKKA_00013
+			product	ATP synthase subunit c
+7917	8405	CDS
+			gene	atpF
+			inference	ab initio prediction:Prodigal:2.6
+			inference	protein motif:HAMAP:MF_01398
+			locus_tag	PROKKA_00014
+			product	ATP synthase subunit b
+8409	9920	CDS
+			EC_number	3.6.3.14
+			gene	atpA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q05372
+			locus_tag	PROKKA_00015
+			product	ATP synthase subunit alpha
+9966	10067	CDS
+			gene	ycf12
+			inference	ab initio prediction:Prodigal:2.6
+			inference	protein motif:HAMAP:MF_01329
+			locus_tag	PROKKA_00016
+			product	Photosystem II reaction center protein Ycf12
+10122	10262	CDS
+			gene	psbK
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q9F1K9
+			locus_tag	PROKKA_00017
+			product	Photosystem II reaction center protein K precursor
+10509	10581	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00018
+			product	tRNA-Asn(gtt)
+10812	11081	CDS
+			gene	rplW
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P04454
+			locus_tag	PROKKA_00019
+			product	50S ribosomal protein L23
+11183	11941	CDS
+			gene	rplB
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P60432
+			locus_tag	PROKKA_00020
+			product	50S ribosomal protein L2
+11971	12237	CDS
+			gene	rpsS
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P12731
+			locus_tag	PROKKA_00021
+			product	30S ribosomal protein S19
+12322	13053	CDS
+			gene	rpsC
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P73314
+			locus_tag	PROKKA_00022
+			product	30S ribosomal protein S3
+13210	13656	CDS
+			gene	rplP
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q6N4U1
+			locus_tag	PROKKA_00023
+			product	50S ribosomal protein L16
+13619	13987	CDS
+			gene	rplN
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P73310
+			locus_tag	PROKKA_00024
+			product	50S ribosomal protein L14
+14710	15942	CDS
+			gene	tuf
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q8YP63
+			locus_tag	PROKKA_00025
+			product	Elongation factor Tu
+16048	17503	rRNA
+			locus_tag	PROKKA_00026
+			product	16S ribosomal RNA
+			score	0
+17560	17633	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00027
+			product	tRNA-Ile(gat)
+17647	17721	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00028
+			product	tRNA-Ala(tgc)
+17773	19229	rRNA
+			locus_tag	PROKKA_00029
+			note	aligned only 45 percent of the 23S ribosomal RNA
+			product	23S ribosomal RNA (partial)
+			score	2.2e-286
+19238	21709	rRNA
+			locus_tag	PROKKA_00030
+			note	aligned only 76 percent of the 23S ribosomal RNA
+			product	23S ribosomal RNA (partial)
+			score	0
+21974	22058	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00031
+			product	tRNA-Leu(taa)
+22150	22899	CDS
+			gene	rpsB
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:A6U8K2
+			locus_tag	PROKKA_00032
+			product	30S ribosomal protein S2
+23095	23208	CDS
+			gene	rpmJ
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P80256
+			locus_tag	PROKKA_00033
+			product	50S ribosomal protein L36
+23210	24913	CDS
+			EC_number	6.3.4.19
+			gene	tilS
+			inference	ab initio prediction:Prodigal:2.6
+			inference	protein motif:HAMAP:MF_01161
+			locus_tag	PROKKA_00034
+			product	tRNA(Ile)-lysidine synthase
+25107	24910	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00035
+			product	hypothetical protein
+25118	25501	CDS
+			gene	rpsL
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P0A4A5
+			locus_tag	PROKKA_00036
+			product	30S ribosomal protein S12
+25511	25996	CDS
+			gene	rpsG
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P0A2B3
+			locus_tag	PROKKA_00037
+			product	30S ribosomal protein S7
+26214	26312	CDS
+			gene	psaM
+			inference	ab initio prediction:Prodigal:2.6
+			inference	protein motif:HAMAP:MF_00828
+			locus_tag	PROKKA_00038
+			product	Photosystem I reaction center subunit XII
+26360	26435	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00039
+			product	tRNA-Arg(acg)
+26457	26531	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00040
+			product	tRNA-Trp(cca)
+26942	27526	CDS
+			gene	ccsA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P72978
+			locus_tag	PROKKA_00041
+			product	Cytochrome c biogenesis protein CcsA
+27563	28153	CDS
+			EC_number	3.4.21.92
+			gene	clpP
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P63786
+			locus_tag	PROKKA_00042
+			product	ATP-dependent Clp protease proteolytic subunit
+28325	29851	CDS
+			gene	psbC_1
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P09193
+			locus_tag	PROKKA_00043
+			product	Photosystem II 44 kDa reaction center protein
+29867	29962	CDS
+			gene	psbT
+			inference	ab initio prediction:Prodigal:2.6
+			inference	protein motif:HAMAP:MF_00808
+			locus_tag	PROKKA_00044
+			product	Photosystem II reaction center protein T
+30220	30450	CDS
+			gene	psbH
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q8DJ43
+			locus_tag	PROKKA_00045
+			product	Photosystem II reaction center protein H
+30578	30664	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00046
+			product	tRNA-Ser(tga)
+30770	30845	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00047
+			product	tRNA-Asp(gtc)
+30877	30948	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00048
+			product	tRNA-Arg(tct)
+31105	32043	CDS
+			gene	petA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P95522
+			locus_tag	PROKKA_00049
+			product	Apocytochrome f precursor
+32128	32319	CDS
+			gene	rpsR
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q5SLQ0
+			locus_tag	PROKKA_00050
+			product	30S ribosomal protein S18
+34440	35462	CDS
+			EC_number	2.7.7.6
+			gene	rpoC_1
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:A8HTZ1
+			locus_tag	PROKKA_00051
+			product	DNA-directed RNA polymerase subunit beta'
+35674	35759	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00052
+			product	tRNA-Met(cat)
+35831	36073	CDS
+			gene	psbE
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P12238
+			locus_tag	PROKKA_00053
+			product	Cytochrome b559 subunit alpha
+36126	36251	CDS
+			gene	psbF
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P12239
+			locus_tag	PROKKA_00054
+			product	Cytochrome b559 subunit beta
+36449	36571	CDS
+			gene	psbJ
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q7DGD4
+			locus_tag	PROKKA_00055
+			product	Photosystem II reaction center protein J
+36651	36839	CDS
+			gene	psbZ
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:D0VWR5
+			locus_tag	PROKKA_00056
+			product	Photosystem II reaction center protein Z
+36869	36985	CDS
+			gene	petG
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P58246
+			locus_tag	PROKKA_00057
+			product	Cytochrome b6-f complex subunit 5
+37132	37202	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00058
+			product	tRNA-Gly(tcc)
+37409	37335	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00059
+			product	tRNA-Lys(ttt)
+38968	37541	CDS
+			EC_number	4.1.1.39
+			gene	cbbL
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P00879
+			locus_tag	PROKKA_00060
+			product	Ribulose bisphosphate carboxylase large chain
+39117	39046	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00061
+			product	tRNA-Phe(gaa)
+39301	39229	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00062
+			product	tRNA-Thr(tgt)
+39414	39332	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00063
+			product	tRNA-Tyr(gta)
+39511	39438	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00064
+			product	tRNA-Pro(tgg)
+39598	39527	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00065
+			product	tRNA-Gln(ttg)
+40007	39762	CDS
+			EC_number	1.97.1.12
+			gene	psaC
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P0A412
+			locus_tag	PROKKA_00066
+			product	Photosystem I iron-sulfur center
+40581	40066	CDS
+			gene	ycf3
+			inference	ab initio prediction:Prodigal:2.6
+			inference	protein motif:HAMAP:MF_00439
+			locus_tag	PROKKA_00067
+			product	Photosystem I assembly protein Ycf3
+40697	40627	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00068
+			product	tRNA-Gly(gcc)
+41297	40815	CDS
+			gene	petD
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P83792
+			locus_tag	PROKKA_00069
+			product	Cytochrome b6-f complex subunit 4
+42028	41381	CDS
+			gene	petB
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P83791
+			locus_tag	PROKKA_00070
+			product	Cytochrome b6
+42278	43078	CDS
+			gene	minD
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q01464
+			locus_tag	PROKKA_00071
+			product	Septum site-determining protein MinD
+43202	43116	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00072
+			product	tRNA-Ser(gct)
+43295	43215	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00073
+			product	tRNA-Leu(tag)
+44717	43332	CDS
+			gene	psbC_2
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P09193
+			locus_tag	PROKKA_00074
+			product	Photosystem II 44 kDa reaction center protein
+45759	44701	CDS
+			EC_number	1.10.3.9
+			gene	psbD1
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q8CM25
+			locus_tag	PROKKA_00075
+			product	Photosystem II D2 protein
+48524	46281	CDS
+			EC_number	1.97.1.12
+			gene	psaB
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P29255
+			locus_tag	PROKKA_00076
+			product	Photosystem I P700 chlorophyll a apoprotein A2
+50809	48557	CDS
+			EC_number	1.97.1.12
+			gene	psaA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P0A405
+			locus_tag	PROKKA_00077
+			product	Photosystem I P700 chlorophyll a apoprotein A1
+51343	51416	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00078
+			product	tRNA-Met(cat)
+51746	52000	CDS
+			gene	rplT
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P78023
+			locus_tag	PROKKA_00079
+			product	50S ribosomal protein L20
+52131	52475	CDS
+			gene	rpsN
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P0AG59
+			locus_tag	PROKKA_00080
+			product	30S ribosomal protein S14
+52631	52561	tRNA
+			inference	COORDINATES:profile:Aragorn:1.2
+			locus_tag	PROKKA_00081
+			product	tRNA-Cys(gca)
+52929	56291	CDS
+			EC_number	2.7.7.6
+			gene	rpoB_1
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P0A8V2
+			locus_tag	PROKKA_00082
+			product	DNA-directed RNA polymerase subunit beta
+56409	57692	CDS
+			EC_number	2.7.7.6
+			gene	rpoB_2
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q8RQE9
+			locus_tag	PROKKA_00083
+			product	DNA-directed RNA polymerase subunit beta
+57717	61415	CDS
+			EC_number	2.7.7.6
+			gene	rpoC_2
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P0A674
+			locus_tag	PROKKA_00084
+			product	DNA-directed RNA polymerase subunit beta'
+61445	62572	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00085
+			product	hypothetical protein
+62601	63425	CDS
+			EC_number	2.7.7.6
+			gene	rpoA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P20429
+			locus_tag	PROKKA_00086
+			product	DNA-directed RNA polymerase subunit alpha
+64497	63607	CDS
+			EC_number	1.10.3.9
+			gene	psbA1
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P04996
+			locus_tag	PROKKA_00087
+			product	Photosystem Q(B) protein 1 precursor
+>Feature CHLO-2
+43	231	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00088
+			product	hypothetical protein
+369	737	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00089
+			product	hypothetical protein
+1194	769	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00090
+			product	hypothetical protein
+2867	1422	CDS
+			EC_number	5.4.2.10
+			gene	glmM
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P99087
+			locus_tag	PROKKA_00091
+			product	Phosphoglucosamine mutase
+3384	3085	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00092
+			product	hypothetical protein
+3991	3395	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00093
+			product	hypothetical protein
+4345	4121	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00094
+			product	hypothetical protein
+4808	6073	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00095
+			product	hypothetical protein
+7386	6286	CDS
+			EC_number	3.1.4.17
+			gene	cpdA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q8YLG0
+			locus_tag	PROKKA_00096
+			product	3',5'-cyclic adenosine monophosphate phosphodiesterase CpdA
+7520	8284	CDS
+			EC_number	2.1.1.33
+			gene	trmB
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P44648
+			locus_tag	PROKKA_00097
+			product	tRNA (guanine-N(7)-)-methyltransferase
+9164	8292	CDS
+			EC_number	2.4.2.19
+			gene	nadC
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P39666
+			locus_tag	PROKKA_00098
+			product	putative nicotinate-nucleotide pyrophosphorylase [carboxylating]
+>Feature CHLO-3
+2706	1174	CDS
+			EC_number	4.1.3.27
+			gene	trpE
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P20580
+			locus_tag	PROKKA_00099
+			product	Anthranilate synthase component 1
+3212	2784	CDS
+			gene	psaD
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P23076
+			locus_tag	PROKKA_00100
+			product	Photosystem I reaction center subunit II
+3497	3988	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00101
+			product	hypothetical protein
+4051	4542	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00102
+			product	hypothetical protein
+5880	4546	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00103
+			product	hypothetical protein
+6156	6047	rRNA
+			locus_tag	PROKKA_00104
+			product	5S ribosomal RNA
+			score	4.3e-07
+>Feature CHLO-4
+1114	98	CDS
+			gene	cbpA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P36659
+			locus_tag	PROKKA_00105
+			product	Curved DNA-binding protein
+3198	1213	CDS
+			gene	dnaK2
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:P22358
+			locus_tag	PROKKA_00106
+			product	Chaperone protein dnaK2
+4121	3327	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00107
+			product	hypothetical protein
+>Feature CHLO-5
+198	629	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00108
+			product	hypothetical protein
+677	1006	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00109
+			product	hypothetical protein
+1150	992	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00110
+			product	hypothetical protein
+2196	1303	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00111
+			product	hypothetical protein
+2414	2202	CDS
+			inference	ab initio prediction:Prodigal:2.6
+			locus_tag	PROKKA_00112
+			product	hypothetical protein
+2775	2665	rRNA
+			locus_tag	PROKKA_00113
+			product	5S ribosomal RNA
+			score	7.2e-11
+>Feature CHLO-6
+21	1187	CDS
+			EC_number	6.1.1.14
+			gene	glyQ
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q9WY59
+			locus_tag	PROKKA_00114
+			product	Glycine--tRNA ligase alpha subunit
+2330	2494	CDS
+			gene	kaiA
+			inference	ab initio prediction:Prodigal:2.6
+			inference	similar to AA sequence:UniProtKB:Q6L8K1
+			locus_tag	PROKKA_00115
+			product	Circadian clock protein KaiA
+>Feature CHLO-7
+1	1565	rRNA
+			locus_tag	PROKKA_00116
+			note	aligned only 48 percent of the 23S ribosomal RNA
+			product	23S ribosomal RNA (partial)
+			score	0
+>Feature CHLO-8
+1562	1	rRNA
+			locus_tag	PROKKA_00117
+			note	aligned only 48 percent of the 23S ribosomal RNA
+			product	23S ribosomal RNA (partial)
+			score	0
