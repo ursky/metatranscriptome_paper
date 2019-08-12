@@ -35,7 +35,9 @@ def get_pathways(filename, taxonomy, expression):
 		contig=gene.split("-")[0]
 		protein=cut[2]
 		paths = cut[4]
-		if "Photosynthesis" not in paths or "photosystem" not in protein or "PsbK" in protein:
+		if "Photosynthesis" not in paths:
+			continue
+		if "cytoch" in protein:
 			continue
 		if contig not in taxonomy:
 			continue
@@ -87,31 +89,38 @@ def add_data_to_df(filename, final_df, df):
 
 def rename_labels(labels):
 	for i,label in enumerate(labels):
-		cut=label.split()
-		out=[]
-		for j,word in enumerate(cut):
-			if word=="photosystem":
-				if cut[j+1]=="I":
-					out.append("PSI")
-				else:
-					out.append("PSII")
-			elif word=="I" or word=="II":
-				continue
-			elif word=="cytochrome":
-				out.append("cytoch")
-			elif word=="chlorophyll":
-				out.append("Chlo")
-			elif word=="apoprotein" or word=="protein" or word=="a":
-				continue
-			elif word=="alpha":
-				out[-2]=out[-2]+r'$\alpha$'
-				out=out[:-1]
-			elif word=="beta":
-				out[-2]=out[-2]+r'$\beta$'
-				out=out[:-1]
-			else:
-				out.append(word)
-		labels[i]=" ".join(out)
+		if label=="photosystem I P700 chlorophyll a apoprotein A1":
+			label="PsaA-1"
+		elif label=="photosystem I P700 chlorophyll a apoprotein A2":
+			label="PsaA-2"
+		elif label=="photosystem I subunit 7":
+			label="PsaC"
+		elif label=="photosystem II CP43 chlorophyll apoprotein":
+			label="PsbC"
+		elif label=="photosystem II CP47 chlorophyll apoprotein":
+			label="PsbB"
+		elif label=="photosystem II PsbH protein":
+			label="PsbH"
+		elif label=="photosystem II PsbZ protein":
+			label="PsbZ"
+		elif label=="photosystem II PsbK protein":
+			label="PsbK"
+		elif label=="F-type H+-transporting ATPase subunit a":
+			label="F-ATPase-a"
+		elif label=="F-type H+-transporting ATPase subunit alpha":
+			label="F-ATPase-"+r'$\alpha$'
+		elif label=="F-type H+-transporting ATPase subunit b":
+			label="F-ATPase-b"
+		elif label=="F-type H+-transporting ATPase subunit beta":
+			label="F-ATPase-"+r'$\beta$'
+		elif label=="F-type H+-transporting ATPase subunit c":
+			label="F-ATPase-c"
+		elif label=="F-type H+-transporting ATPase subunit epsilon":
+			label="F-ATPase-"+r'$\epsilon$'
+		else:
+			label=label
+		print label
+		labels[i]=label
 	return labels
 
 
@@ -145,7 +154,7 @@ font = {'family': 'arial', 'weight': 'normal', 'size': 12}
 sns.set_palette("colorblind")
 sns.set_style("whitegrid")
 
-fig, ax = plt.subplots(figsize=(10,5))
+fig, ax = plt.subplots(figsize=(8,6))
 ax.set_yscale('log')
 sns.catplot(x="gene", y="tpm", hue="organism", kind="bar", data=final_df, ax=ax)
 sns.swarmplot(x="gene", y="tpm", hue="organism", edgecolor='gray', linewidth=0.3, size=3, data=final_df, split=True, ax=ax)
@@ -156,7 +165,7 @@ ax.set_xticklabels(labels, rotation=45)
 
 
 handles, labels = ax.get_legend_handles_labels()
-ax.legend(handles[3:], labels[3:], loc='upper right', ncol=3)
+ax.legend(handles[3:], labels[3:], loc='upper center', ncol=3, fontsize=14)
 
 
 ax.set_ylabel("Total expression (Log10 TPM)")

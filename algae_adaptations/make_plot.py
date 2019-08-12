@@ -132,6 +132,7 @@ for line in open("Dolichomastix.master"):
 	y.append(tpm)
 
 	if gene in goi:
+		print gene + "\t" + str(tpm)
 		goi_info[gene]=(gc, tpm, gene_name, color)
 
 

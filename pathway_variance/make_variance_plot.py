@@ -219,7 +219,7 @@ print "computing pathway tables..."
 vars_df = pd.DataFrame(columns=['Taxon', 'Type', 'Variance'])
 
 if "recalc" in sys.argv:
-	for taxon in ["Eukaryota", "Bacteria", "Archaea", "Cyanobacteria", "Bacteroidetes", "Proteobacteria", "Actinobacteria", "Nanoarchaeota"]:
+	for taxon in ["Cyanobacteria", "Euryarchaeota", "Bacteroidetes", "Proteobacteria", "Actinobacteria", "Nanoarchaeota"]:
 		print taxon
 		pathway_df = get_pathways("img_annotation.master", dna_df, rna_df, taxonomy, taxon=taxon)
 		df = pathway_df
@@ -236,7 +236,7 @@ else:
 print "making variance violin..."
 font = {'family': 'arial', 'weight': 'normal', 'size': 12}
 sns.set_palette("colorblind")
-fig, ax = plt.subplots(figsize=(10,5))
+fig, ax = plt.subplots(figsize=(10,3))
 
 sns.boxplot(x="Taxon", y="Variance", hue="Type", data=vars_df, palette={"DNA": "cyan", "RNA": "gold"}, linewidth=1, fliersize=3)
 sns.swarmplot(x="Taxon", y="Variance", hue="Type", data=vars_df, palette={"DNA": "cyan", "RNA": "gold"}, linewidth=0.5, split=True, size=2, label=None, alpha=0.5)

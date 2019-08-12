@@ -226,7 +226,7 @@ def length_legend(ax):
 		legend_elements.append(Patch(facecolor="w", edgecolor="w", label="    ", linewidth=1))
 	ax.legend(handles=legend_elements, loc="lower right", framealpha=1, frameon=True, facecolor='w', ncol=2, columnspacing=1, handlelength=1, prop={'size': label_font})
 
-	x=70
+	x=90
 	y=0.18
 	ax.text(x-10, y+0.2, "Contig length:", fontsize=label_font, verticalalignment='center', zorder=10)
 	for s in [100000, 30000, 10000, 3000]:
@@ -245,7 +245,7 @@ def expression_legend(ax):
 	# make the circle legend
 	x=0.4
 	y=0.35
-	ax.text(x-0.2, y+0.15, "Total transcript contribution:", fontsize=label_font, verticalalignment='center', zorder=10)
+	ax.text(x-0.15, y+0.15, "Total transcript contribution:", fontsize=label_font, verticalalignment='center', zorder=10)
 	for s in [30000, 10000, 3000, 1000]:
 		ax.scatter(x, y, s=s/100, alpha=0.5, c='b', zorder=10)
 		ax.text(x, y-0.18, str(s)+"tpm", fontsize=axis_font, horizontalalignment="right", verticalalignment='center', rotation=30, zorder=10)
@@ -258,7 +258,7 @@ def color_legend(ax):
 	plt.axis("off")
 	legend_elements = []
 	for taxon in scheme:
-		legend_elements.append(Patch(facecolor=scheme[taxon], edgecolor='k', label=taxon, linewidth=1))
+		legend_elements.append(Patch(facecolor=scheme[taxon], edgecolor='k', label=taxon, linewidth=1, alpha=0.6))
 	ax.legend(handles=legend_elements, loc="lower center", framealpha=1, frameon=True, facecolor='w', ncol=2, columnspacing=1, handlelength=1, prop={'size': label_font})
 
 		
@@ -270,19 +270,17 @@ font = {'family': 'arial', 'weight': 'normal', 'size': 12}
 plt.rc('font', **font)
 
 sns.set_palette("colorblind")
-fig = plt.figure(figsize=(6, 9), dpi=300)
+fig = plt.figure(figsize=(9, 12), dpi=300)
 
 axis_font=8
 label_font=10
 heading_font=16
 
-scheme = {      "Euryarchaeota":        "white",
+scheme = {      "Euryarchaeota":        "yellow",
 		"Nanoarchaeota":        "blue",
-                "Proteobacteria":       "orange",
+                "Proteobacteria":       "pink",
                 "Bacteroidetes":        "g",
                 "Cyanobacteria":        "r",
-                "Actinobacteria":       "c",
-		"Firmicutes":        	"pink",
                 "Chlorophyta":          "black"  }
 
 ##################   DRAW BLOBPLOT   ######################

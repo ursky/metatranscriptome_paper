@@ -146,7 +146,18 @@ def get_pathway_ratios(filename, dna_df, rna_df, taxonomy, toi):
 				pathways[path][taxon+"_DNA"]=0
 				pathways[path][taxon+"_RNA"]=0
 				gene_lists[path][taxon]=[]
-		
+			
+			
+
+			if "Nanoa" in taxon:
+				if "Transcription" in path or "Translation" in path:
+					print gene_name
+	
+
+
+
+
+			
 			for sample in dna_data:
 				if contig not in dna_data[sample]:
 					continue
@@ -310,17 +321,17 @@ df = get_ratios(df)
 
 
 # standardize by sample ratio total
-df = 10*df.div(df.sum(axis=0), axis=1)
+#df = 10*df.div(df.sum(axis=0), axis=1)
 
 # get top pathways
-df = get_top_pathways(df, 30)
+df = get_top_pathways(df, 40)
 
 
 
 ##################   MAKE HEATMAP   ######################
 print "making heatmap..."
 
-g = sns.clustermap(df, figsize=(6,6), col_cluster=True, row_cluster=True, yticklabels=True, xticklabels=True, cmap="magma", method="weighted")
+g = sns.clustermap(df, figsize=(3,10), col_cluster=True, row_cluster=True, yticklabels=True, xticklabels=True, cmap="PiYG", method="weighted")
 plt.savefig("figure.png", bbox_inches='tight', dpi=300)
 
 

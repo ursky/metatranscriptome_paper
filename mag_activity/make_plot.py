@@ -63,11 +63,30 @@ def draw_clustermap(df, lut):
 	print "drawing clustermap..."
 	sns.set(font_scale=1)
 	if lut!=False:
-		g = sns.clustermap(df, figsize=(14,8), col_colors=lut, col_cluster=True, yticklabels=True, cmap="magma")
+		g = sns.clustermap(df, figsize=(8,8), col_colors=lut, col_cluster=True, yticklabels=True, cmap="magma")
 	else:
-		g = sns.clustermap(df, figsize=(14,8), col_cluster=True, yticklabels=True, cmap="magma")
+		g = sns.clustermap(df, figsize=(8,8), col_cluster=True, yticklabels=True, cmap="magma")
 	plt.setp(g.ax_heatmap.get_xticklabels(), rotation=90)
 	plt.setp(g.ax_heatmap.yaxis.get_majorticklabels(), rotation=0)
+
+def get_ratios(dna_df, rna_df):
+	dna_dic = dna_df.to_dict()
+	rna_dic = rna_df.to_dict()
+	ratios = {}
+
+	for sample in rna_dic:
+		name = "-".join(sample.split("-")[:-1])
+		ratios[name]={}
+		for mag in rna_dic[sample]:
+			dna = dna_dic[name+""][mag]
+			rna = rna_dic[name+"-mRNA"][mag]
+			if dna==0:
+				ratio=0
+			else:
+				ratio=rna/dna
+			ratios[name][mag]=ratio
+	
+	return pd.DataFrame.from_dict(ratios)
 
 
 def fix_sample_naming(df):
@@ -86,10 +105,17 @@ def fix_sample_naming(df):
 dna_df = load_data("mag_abundance.tab")
 rna_df = load_data("mag_activity.tab")
 
-df = pd.concat([dna_df, rna_df], axis=1, sort=True)
-df = df.drop(["ALL-mRNA", "ALL-DNA"], axis=1)
-df = fix_sample_naming(df)
-print df
+rna_df.drop("ALL-mRNA", axis=1, inplace=True)
+dna_df.drop("ALL-DNA", axis=1, inplace=True)
+
+
+#concatinate dna and rna data
+#df = pd.concat([dna_df, rna_df], axis=1, sort=True)
+
+
+#compute ratios
+df = get_ratios(dna_df, rna_df)
+#df = fix_sample_naming(df)
 
 # log standardize:
 df+=0.01; df=np.log(df)

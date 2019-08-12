@@ -239,14 +239,24 @@ print "processing matrix..."
 for index, row in df.iterrows():
 	if sum(row)<100:
 		df = df.drop([index])
+
+# standardize by sample total coverage
+sums = []
+for col in df.columns.values:
+        sums.append( sum(df[col]) )
+df = df.div(df.sum(axis=0), axis=1)
+df*=np.mean(sums)
+
+
+
+# standardize by maximum value in each row
+df = df.div(df.max(axis=1), axis=0)
+
+
 # log standardize
 #df += 1
 #df = df.apply(np.log)
 
-# standardize by sample total coverage
-df = df.div(df.sum(axis=0), axis=1)
-# standardize by maximum value in each row
-df = df.div(df.max(axis=1), axis=0)
 
 # sort pathways by expression
 dna_col_list=[]; rna_col_list=[]
@@ -281,6 +291,7 @@ for sample in df.columns.values:
                 c="w"
         lut.append(c)
 
+print df
 print df.shape
 g = sns.clustermap(df, figsize=(5,8), col_colors=lut, col_cluster=True, row_cluster=True, yticklabels=True, xticklabels=True, cmap="magma", method="weighted")
 
