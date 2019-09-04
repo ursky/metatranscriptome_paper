@@ -1,0 +1,13 @@
+{
+    "salmon_version": "0.9.1",
+    "libType": "ISF",
+    "meta": [],
+    "gcBias": [],
+    "seqBias": [],
+    "threads": "5",
+    "index": "transcripts.index/",
+    "mates1": "../CLEAN_READS/M-RNA/9AM-3-mRNA_1.fastq",
+    "mates2": "../CLEAN_READS/M-RNA/9AM-3-mRNA_2.fastq",
+    "output": "9AM-3-mRNA.salmon/",
+    "auxDir": "aux_info"
+}

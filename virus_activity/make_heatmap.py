@@ -278,8 +278,24 @@ df = df.div(df.max(axis=1), axis=0)
 ##################   MAKE HEATMAP   ######################
 print "making heatmap..."
 
+sample_cols=[]
+for sample in df.columns.values:
+	if "DNA" in sample:
+		sample_cols.append("b")
+	elif "RNA" in sample:
+		sample_cols.append("r")
+	else:
+		sample_cols.append("w")
+colors=[]
+for virus in df.index.values:
+	host = hosts[virus]
+	if host=="Euryarchaeota": colors.append("b")
+	elif host=="Proteobacteria": colors.append("c")
+	elif host=="Cyanobacteria": colors.append("g")
+	elif host=="Bacteroidetes": colors.append("gold")
+	else: colors.append("w")
 
-sns.clustermap(df, figsize=(8,12), col_cluster=True, yticklabels=True, xticklabels=True, cmap="magma", method="weighted")
+sns.clustermap(df, figsize=(8,12), col_cluster=False, yticklabels=False, xticklabels=True, cmap="magma", method="weighted", col_colors=sample_cols, row_colors=colors)
 
 
 plt.savefig("heatmap.png", dpi=600, bbox_inches="tight")

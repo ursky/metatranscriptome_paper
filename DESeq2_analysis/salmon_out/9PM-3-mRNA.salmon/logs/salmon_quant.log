@@ -1,0 +1,47 @@
+[2018-12-07 11:22:00.402] [jointLog] [info] parsing read library format
+[2018-12-07 11:22:00.402] [jointLog] [info] There is 1 library.
+[2018-12-07 11:22:00.685] [jointLog] [info] Loading Quasi index
+[2018-12-07 11:22:00.685] [jointLog] [info] Loading 32-bit quasi index
+[2018-12-07 11:22:51.384] [jointLog] [info] done
+[2018-12-07 11:22:51.384] [jointLog] [info] Index contained 453233 targets
+[2018-12-07 11:24:10.555] [jointLog] [info] Computed 57282 rich equivalence classes for further processing
+[2018-12-07 11:24:10.555] [jointLog] [info] Counted 303564 total reads in the equivalence classes 
+[2018-12-07 11:24:10.561] [jointLog] [warning] 0.103456% of fragments were shorter than the k used to build the index (31).
+If this fraction is too large, consider re-building the index with a smaller k.
+The minimum read size found was 20.
+
+
+[2018-12-07 11:24:10.667] [jointLog] [warning] Only 303564 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2018-12-07 11:24:10.667] [jointLog] [info] Mapping rate = 25.1244%
+
+[2018-12-07 11:24:10.667] [jointLog] [info] finished quantifyLibrary()
+[2018-12-07 11:24:10.676] [jointLog] [info] Starting optimizer
+[2018-12-07 11:24:10.556] [fileLog] [info] 
+At end of round 0
+==================
+Observed 1208242 total fragments (1208242 in most recent round)
+
+[2018-12-07 11:24:11.547] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2018-12-07 11:24:11.600] [jointLog] [info] iteration = 0 | max rel diff. = 12.4211
+[2018-12-07 11:24:11.705] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2018-12-07 11:31:10.291] [jointLog] [info] Computed expected counts (for bias correction)
+[2018-12-07 11:31:10.292] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2018-12-07 11:35:54.034] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2018-12-07 11:36:35.696] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2018-12-07 11:36:36.396] [jointLog] [info] iteration = 100 | max rel diff. = 0.345591
+[2018-12-07 11:36:37.165] [jointLog] [info] iteration = 200 | max rel diff. = 0.0240561
+[2018-12-07 11:36:37.925] [jointLog] [info] iteration = 300 | max rel diff. = 0.048471
+[2018-12-07 11:36:38.861] [jointLog] [info] iteration = 400 | max rel diff. = 0.0412494
+[2018-12-07 11:36:39.705] [jointLog] [info] iteration = 500 | max rel diff. = 0.0350079
+[2018-12-07 11:36:40.578] [jointLog] [info] iteration = 600 | max rel diff. = 0.0205792
+[2018-12-07 11:36:41.432] [jointLog] [info] iteration = 700 | max rel diff. = 0.0366801
+[2018-12-07 11:36:41.598] [jointLog] [info] iteration = 725 | max rel diff. = 0.00624045
+[2018-12-07 11:36:41.728] [jointLog] [info] Finished optimizer
+[2018-12-07 11:36:41.728] [jointLog] [info] writing output 
+
+[2018-12-07 11:36:43.252] [jointLog] [warning] NOTE: Read Lib [( ../CLEAN_READS/M-RNA/9PM-3-mRNA_1.fastq, ../CLEAN_READS/M-RNA/9PM-3-mRNA_2.fastq )] :
+
+Greater than 5% of the fragments disagreed with the provided library type; check the file: 9PM-3-mRNA.salmon/lib_format_counts.json for details
+

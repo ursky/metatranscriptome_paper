@@ -160,7 +160,6 @@ def virus_dna_vs_rna(viruses, dna_coverage, rna_coverage, hosts, sample, ax):
 		elif host=="Proteobacteria": colors.append("c")
 		elif host=="Cyanobacteria": colors.append("g")
 		elif host=="Bacteroidetes": colors.append("gold")
-		elif host=="Firmicutes": colors.append("m")
 		else: colors.append("k")
 
 		dnas.append(dna)
