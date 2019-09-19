@@ -168,7 +168,7 @@ def draw_scatter(dna_data, rna_data, ax, archaea=False):
 			y.append(0)
 		sizes.append(dna_data[contig]["length"]/500)
 		colors.append(dna_data[contig]["color"])
-	ax.scatter(x, y, s=sizes, alpha=0.1, c=colors)
+	ax.scatter(x, y, s=sizes, alpha=0.3, c=colors)
 	ax.set_xscale('log')
 	ax.set_yscale('log')
 	ax.set_xlim(1, max(x))
@@ -180,6 +180,7 @@ def draw_scatter(dna_data, rna_data, ax, archaea=False):
 	ax.spines['top'].set_visible(False)
 	plt.tick_params(labelsize=axis_font)
 	plt.grid(alpha=0.3, linestyle='--')
+	plt.grid(which='minor', alpha=0.3, linestyle='--', axis='x')
 	
 
 
@@ -217,6 +218,7 @@ def draw_averages (taxon_info, ax):
 	ax.spines['top'].set_visible(False)
 	plt.tick_params(labelsize=axis_font)
 	plt.grid(which='minor', alpha=0.3, linestyle='--')
+	plt.grid(which='major', alpha=0.3, linestyle='--')
 
 
 def length_legend(ax):

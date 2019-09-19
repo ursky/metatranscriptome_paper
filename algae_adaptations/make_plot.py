@@ -51,10 +51,19 @@ for filename in ["Dolichomastix.iso", "Dunaliella.iso", "Micromonas.iso", "Oster
 		data[i] = 100.0*data[i]/tot
 
 	#plt.scatter(np.arange(0.0, 14, 0.1), data[sample], s=5, c=c)
-	ax1.plot(np.arange(0.0, 14, increment), data, linewidth=2, label=filename.split(".")[0])
+	#ax1.plot(np.arange(0.0, 14, increment), data, linewidth=2, label=filename.split(".")[0])
+
+	# line ofbest fit
+	xp = np.linspace(0, 14, 100)
+	z = np.polyfit(np.arange(0.0, 14, increment), data, 20)
+	f = np.poly1d(z)
+	ax1.plot(xp, f(xp), label=filename.split(".")[0])
+	
+	
 
 ax1.set_xticks(np.arange(3, 14, 1))
 ax1.set_xlim(3,13)
+ax1.set_ylim(0,8)
 ax1.set_xlabel("Estimated isoelectric point")
 ax1.set_ylabel("Relative gene abundance")
 ax1.legend(fontsize=10)
@@ -180,7 +189,7 @@ ax3.annotate("C", xy=(-0.13, 1.1), xycoords="axes fraction", fontsize=20)
 
 ####################### PANEL D: organelle  pI distributions  #########################
 print "plotting algae pI distributions..."
-increment=0.5
+increment=0.2
 for filename in ["Chromosomes.iso", "Mitochondria.iso", "Chloroplast.iso"]:
         data=[]
         n=0
@@ -204,15 +213,23 @@ for filename in ["Chromosomes.iso", "Mitochondria.iso", "Chloroplast.iso"]:
                 data[i] = 100.0*data[i]/tot
 
         #plt.scatter(np.arange(0.0, 14, 0.1), data[sample], s=5, c=c)
-        ax4.plot(np.arange(0.0, 14, increment), data, linewidth=2, label=filename.split(".")[0])
+        #ax4.plot(np.arange(0.0, 14, increment), data, 'o', label=filename.split(".")[0])
+
+ 	# line of best fit
+        xp = np.linspace(0, 14, 100)
+        z = np.polyfit(np.arange(0.0, 14, increment), data, 20)
+        f = np.poly1d(z)
+        ax4.plot(xp, f(xp), label=filename.split(".")[0])
+
 
 ax4.set_xticks(np.arange(3, 14, 1))
 ax4.set_xlim(3,13)
+ax4.set_ylim(0,6.5)
 ax4.set_xlabel("Estimated isoelectric point")
 ax4.set_ylabel("Relative gene abundance")
 ax4.legend(fontsize=10)
 ax4.grid(b=True, which='both', color='0.65', linestyle='--', alpha=0.2)
-ax4.annotate("A", xy=(-0.12, 0.96), xycoords="axes fraction", fontsize=20)
+ax4.annotate("D", xy=(-0.12, 0.96), xycoords="axes fraction", fontsize=20)
 ax4.spines['top'].set_visible(False)
 ax4.spines['right'].set_visible(False)
 
