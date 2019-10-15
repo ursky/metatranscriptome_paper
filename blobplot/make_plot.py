@@ -12,11 +12,7 @@ sns.set_color_codes()
 import operator as op
 import numpy as np
 import math
-from PIL import Image
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
 from matplotlib.colors import LogNorm
-from PIL import Image
 import scipy.stats
 
 
@@ -195,25 +191,25 @@ def draw_averages (taxon_info, ax):
 			continue
 		abund = np.mean(taxon_info[taxa]["abundances"])
 		ratio = np.mean(taxon_info[taxa]["ratios"])
-		ax.scatter(ratio, abund, c=color, s=total_abund/100, alpha=0.6, edgecolors="k", zorder=10)
-		xs.append(ratio)
-		ys.append(abund)
+		ax.scatter(abund, ratio, c=color, s=total_abund/100, alpha=0.6, edgecolors="k", zorder=10)
+		xs.append(abund)
+		ys.append(ratio)
 		if "_" not in taxa:
-			ax.text(ratio*1.1, abund*1.02, taxa, fontsize=axis_font, zorder=11)
+			ax.text(abund*1.1, ratio*1.02, taxa, fontsize=axis_font, zorder=11)
 		if taxa=="T17_Micromonas_55_7":
-			ax.text(ratio*1.1, abund*1.02, "Chromosomes", fontsize=axis_font, zorder=11)
+			ax.text(abund*1.1, ratio*1.02, "Chromosomes", fontsize=axis_font, zorder=11)
 		if taxa=="T17_Micromonas_42_105":
-			ax.text(ratio*1.1, abund*1.02, "Chloroplast", fontsize=axis_font, zorder=11)
+			ax.text(abund*1.1, ratio*1.02, "Chloroplast", fontsize=axis_font, zorder=11)
 		if taxa=="T17_Micromonas_48_77":
-			ax.text(ratio*1.1, abund*1.02, "Mitochondria", fontsize=axis_font, zorder=11)
+			ax.text(abund*1.1, ratio*1.02, "Mitochondria", fontsize=axis_font, zorder=11)
 
 	ax.set_xscale('log')
 	ax.set_yscale('log')
-	ax.set_xlim(min(xs)/1.5, max(xs)*6)
+	ax.set_xlim(min(xs)/1.5, max(xs)*2)
 	ax.set_ylim(min(ys)/1.5, max(ys)*1.8)
-	ax.set_xlabel("RNA:DNA representation ratio", fontsize=label_font)
 	if "T17_Micromonas_55_7" not in taxon_info:
-		ax.set_ylabel("Average DNA coverage of contigs (CPM)", fontsize=label_font)
+		ax.set_ylabel("RNA:DNA representation ratio", fontsize=label_font)
+	ax.set_xlabel("Average DNA coverage of contigs (CPM)", fontsize=label_font)
 	ax.spines['right'].set_visible(False)
 	ax.spines['top'].set_visible(False)
 	plt.tick_params(labelsize=axis_font)

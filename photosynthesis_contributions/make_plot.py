@@ -165,7 +165,7 @@ ax.set_xticklabels(labels, rotation=45)
 
 
 handles, labels = ax.get_legend_handles_labels()
-ax.legend(handles[3:], labels[3:], loc='upper center', ncol=3, fontsize=14)
+ax.legend(handles[3:], ["$\it{Dolichomastix}$ (chloroplast)", "$\it{Euhalothece}$","$\it{Halothece}$"], loc='upper center', ncol=3, fontsize=14)
 
 
 ax.set_ylabel("Total expression (Log10 TPM)")
