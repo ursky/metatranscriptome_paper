@@ -12,11 +12,9 @@ sns.set_color_codes()
 import operator as op
 import numpy as np
 import math
-from PIL import Image
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 from matplotlib.colors import LogNorm
-from PIL import Image
 import scipy.stats
 import json
 import random
@@ -250,12 +248,12 @@ df*=np.mean(sums)
 
 
 # standardize by maximum value in each row
-df = df.div(df.max(axis=1), axis=0)
+#df = df.div(df.max(axis=1), axis=0)
 
 
 # log standardize
-#df += 1
-#df = df.apply(np.log)
+df += 1
+df = df.apply(np.log)
 
 
 # sort pathways by expression
