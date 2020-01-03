@@ -21,235 +21,114 @@ import scipy.stats
 import json
 import random
 
-def load_files(dirname, genes=False):
-	print "Loading files from "+dirname
-	data={}
-	for filename in os.listdir(dirname):
-		if not filename.startswith("9"):
-			continue
-		file_data = load_abundances(dirname+"/"+filename)
-		if genes==True:
-			file_data = combine_genes(file_data)
-		for contig in file_data:
-			abund = file_data[contig]["abundance"]
-			if contig not in data:
-				data[contig]={}
-				data[contig]["length"]=file_data[contig]["length"]
-				data[contig]["abundance"] = []
-			data[contig]["abundance"].append(abund)
-	return data
-
-
-def load_abundances(file_name):
-	print "loading abundances from "+file_name+"..."
-	data={}
-	for line in open(file_name):
-		if line.startswith("transcript"):
-			n=1
-			continue
-		if line.startswith("Name"):
-			n=3
-			continue
-		cut =line.strip().split("\t")
-		contig=cut[0]
-		if "_length_" not in contig:
-			continue
-		length=int(contig.split("_")[3])
-		if length<1000:
-			continue
-		abund=float(cut[n])
-		data[contig]={}
-		data[contig]["abundance"] = abund
-		data[contig]["length"] = length
-	return data
-
-
-def load_tabular(filename, col=1):
-	data={}
+def load_lib_sizes(filename):
+	print "loading library sizes..."
+	libs={}
 	for line in open(filename):
-		cut=line.strip().split("\t")
-		data[cut[0]]=cut[col]
-	return data
+		if line.startswith("#"): continue
+		lib=line.strip().split("\t")[0]
+		reads=int(line.strip().split("\t")[1])
+		libs[lib] = reads
+	return libs
 
 
-def get_mag_abundance(data, mags):
-	mag_info = {}
-	for contig in data:
-		if contig not in mags:
-			continue
-		mag = mags[contig]
-		if mag not in mag_info:
-			mag_info[mag]={}
-			mag_info[mag]["length"]=data[contig]["length"]
-			mag_info[mag]["totals"]=data[contig]["abundance"]
-		else:
-			mag_info[mag]["length"]+=data[contig]["length"]
-			mag_info[mag]["totals"]=map(sum, zip(data[contig]["abundance"], mag_info[mag]["totals"]))
-	for mag in mag_info:
-		mag_info[mag]["abundance"]=[]
-		for abund in mag_info[mag]["totals"]:
-			mag_info[mag]["abundance"].append(abund/mag_info[mag]["length"])
-	return mag_info
+def load_data(filename):
+	print "loading abundance data..."
+	df=pd.read_csv(filename, sep='\t', index_col=0)
+
+	# remove all 0 rows
+	df = df[(df.T != 0).any()]
+
+	# standardize columns by total sum in each column
+	df = df.div(df.sum(axis=0), axis=1)
+	df=1000000*df
+	return df
 
 
-
-def combine_genes(gene_data):
-	print "calculating extression across contig based on all genes..."
-	temp={}
-	data={}
-	for gene in gene_data:
-		tpm=gene_data[gene]["abundance"]
-		contig=gene.split("-")[0]
-		if contig not in temp:
-			temp[contig]=[]
-			data[contig]={}
-			data[contig]["length"]=gene_data[gene]["length"]
-		temp[contig].append(tpm)
-	for contig in data:
-		mean=np.mean(temp[contig])
-		data[contig]["abundance"]=mean
-	return data
+def set_colors_to_timeline(df):
+	print "adding colored labels..."
+	lut=[]
+	for sample in df.columns.values:
+		if "2013-04" in sample: lut.append('m')
+        	elif "2014-09" in sample: lut.append('r')
+        	elif "2015-06" in sample: lut.append('b')
+		elif "2015-12" in sample: lut.append('c')
+        	elif "2016-02" in sample: lut.append('y')
+        	elif "2017-02" in sample: lut.append('g')
+		else: lut.append('w')
+	return lut
 
 
-def standardize(data):
-	out=[]
-	minimum = min(data)
-	maximum = max(data)
-	if maximum==0:
-		return data
+def draw_clustermap(df, lut):
+	print "drawing clustermap..."
+	sns.set(font_scale=1)
+	if lut!=False:
+		g = sns.clustermap(df, figsize=(8,8), col_colors=lut, col_cluster=True, yticklabels=True, cmap="magma")
 	else:
-		for val in data:
-			out.append((val-minimum)/(maximum-minimum))
-		return out
+		g = sns.clustermap(df, figsize=(8,8), col_cluster=True, yticklabels=True, cmap="magma")
+	plt.setp(g.ax_heatmap.get_xticklabels(), rotation=90)
+	plt.setp(g.ax_heatmap.yaxis.get_majorticklabels(), rotation=0)
 
+def get_ratios(dna_df, rna_df):
+	dna_dic = dna_df.to_dict()
+	rna_dic = rna_df.to_dict()
+	ratios = {}
 
-
-def plot_contigs(dna_data, rna_data, n, ax, alpha=0.2):
-	print "plotting random contigs..."
-	ax.set_xlim(0, 1)
-	ax.set_ylim(0, 1)
-	contigs=rna_data.keys()
-	random.shuffle(contigs)
-	ct=0
-	for i,contig in enumerate(contigs):
-		if ct>=n: break
-		dna = dna_data[contig]["abundance"]
-		rna = rna_data[contig]["abundance"]
-		if max(rna)==0 or dna_data[contig]["length"]<10000:
-			continue
-		dna = standardize(dna)
-		rna = standardize(rna)
-		length = dna_data[contig]["length"]
-		ax.scatter(dna, rna, s=20, alpha=alpha, c='blue', edgecolors='none')
-		ct+=1
-	ax.set_xlabel("Contig DNA coverage (CPM)", fontsize=label_font)
-	ax.set_ylabel("Mean expression or genes on contigs (TPM)", fontsize=label_font)
-	#ax.plot([0.00001, 1000000], [0.000001, 10000000], ls="--", c='k', alpha=0.5)
-	ax.spines['right'].set_visible(False)
-	ax.spines['top'].set_visible(False)
-
+	for sample in rna_dic:
+		name = "-".join(sample.split("-")[:-1])
+		ratios[name]={}
+		for mag in rna_dic[sample]:
+			dna = dna_dic[name+""][mag]
+			rna = rna_dic[name+"-mRNA"][mag]
+			if dna==0:
+				ratio=0
+			else:
+				ratio=rna/dna
+			ratios[name][mag]=ratio
 	
-def plot_correlations(dna_data, rna_data, n, ax):
-	print "calculating correlations..."
-	correlations=[]
-	contigs=rna_data.keys()
-	random.shuffle(contigs)
-	ct=0
-	for i,contig in enumerate(contigs):
-		if ct>=n:
-			break
-		dna = dna_data[contig]["abundance"]
-		rna = rna_data[contig]["abundance"]
-		if max(rna)==0  or dna_data[contig]["length"]<10000:
-			continue
-		corr, pval = scipy.stats.pearsonr(dna, rna)
-		correlations.append(corr)
-		if "T17" in contig:
-			print corr, contig
-		ct+=1
-
-	n, bins, patches = ax.hist(correlations, 20, facecolor='blue', alpha=0.5, rwidth=0.95)
-	ax.set_xlim(-1,1)
-	ax.set_xlabel("Pearson's Coefficient", fontsize=label_font)
-	ax.set_ylabel("Number of contigs", fontsize=label_font)
-	ax.spines['right'].set_visible(False)
-	ax.spines['top'].set_visible(False)
+	return pd.DataFrame.from_dict(ratios)
 
 
+def fix_sample_naming(df):
+	dic = df.to_dict()
+	new={}
+	for k in dic:
+	        if "RNA" in k:
+	                name = "-".join(["RNA"]+k.split("-")[:-1])
+	        else:
+	                name = "DNA-"+k
+		new[name]=dic[k]
+	df = pd.DataFrame.from_dict(new)
+	return df
 
 
-##################   SETUP PLOT   ######################
-# main figure layout:
-font = {'family': 'arial', 'weight': 'normal', 'size': 8}
-plt.rc('font', **font)
+dna_df = load_data("mag_abundance.tab")
+rna_df = load_data("mag_activity.tab")
 
-sns.set_palette("colorblind")
-fig = plt.figure(figsize=(6, 6), dpi=300)
-
-axis_font=8
-label_font=10
-heading_font=16
+rna_df.drop("ALL-mRNA", axis=1, inplace=True)
+dna_df.drop("ALL-DNA", axis=1, inplace=True)
 
 
-##################   LOADING DATA   ######################
-if "reload" in sys.argv:
-	reload=True
-else:
-	reload=False
-if reload==True:
-	print "loading raw data..."
-	dna_data = load_files("abundances_dna")
-	rna_data = load_files("abundances_genes", genes=True)
-	with open('dna_data.json', 'w') as fp:
-		json.dump(dna_data, fp)
-	with open('rna_data.json', 'w') as fp:
-		json.dump(rna_data, fp)
-else:
-	print "loading processed data..."
-	with open('dna_data.json', 'r') as fp:
-		dna_data = json.load(fp)
-	with open('rna_data.json', 'r') as fp:
-		rna_data = json.load(fp)
-
-print "estimating MAG coverage..."
-mags = load_tabular("contigs.mags")
-mag_dna_data = get_mag_abundance(dna_data, mags)
-mag_rna_data = get_mag_abundance(rna_data, mags)
+#concatinate dna and rna data
+#df = pd.concat([dna_df, rna_df], axis=1, sort=True)
 
 
-##################   DRAW CONTIG PLOTS   ######################
-print "plotting A..."
-ax1 = fig.add_axes([0.1, 0.57, 0.37, 0.37])
-plot_contigs(dna_data, rna_data, 10000, ax1, alpha=0.01)
+#compute ratios
+df = get_ratios(dna_df, rna_df)
+#df = fix_sample_naming(df)
 
-print "plotting B..."
-ax2 = fig.add_axes([0.57, 0.57, 0.37, 0.37])
-plot_correlations(dna_data, rna_data, 1000, ax2)
+# log standardize:
+df+=0.01; df=np.log(df)
 
+# standardize rows by maximum value in each row
+#df = df.div(df.max(axis=1), axis=0)
 
-##################   DRAW MAG PLOTS   ######################
-print "plotting C..."
-ax3 = fig.add_axes([0.1, 0.07, 0.37, 0.37])
-plot_contigs(mag_dna_data, mag_rna_data, 1000, ax3)
-ax3.set_ylabel("Mean expression or genes in MAGs (TPM)", fontsize=label_font)
+lut=False
+draw_clustermap(df, lut)
 
-print "plotting D..."
-ax4 = fig.add_axes([0.57, 0.07, 0.37, 0.37])
-plot_correlations(mag_dna_data, mag_rna_data, 1000, ax4)
-ax4.set_ylabel("Number of MAGs", fontsize=label_font)
+plt.savefig("figure.png", bbox_inches='tight', dpi=300)
 
 
-##################   FINISHING PLOT   ######################
-ax1.annotate("A", xy=(-0.12, 1.05), xycoords="axes fraction", fontsize=heading_font)
-ax2.annotate("B", xy=(-0.12, 1.05), xycoords="axes fraction", fontsize=heading_font)
-ax3.annotate("C", xy=(-0.12, 1.05), xycoords="axes fraction", fontsize=heading_font)
-ax4.annotate("D", xy=(-0.12, 1.05), xycoords="axes fraction", fontsize=heading_font)
-
-
-#plt.subplots_adjust(left=0.1, right=0.95, top=0.9, bottom=0.1)
-plt.savefig("figure_3.png", dpi=300)
-#plt.savefig("figure_S2.eps", dpi=300)
-#plt.show()
 
 
 

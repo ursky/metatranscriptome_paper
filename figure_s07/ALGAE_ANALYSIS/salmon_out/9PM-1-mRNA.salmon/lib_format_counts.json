@@ -1,0 +1,21 @@
+{
+    "read_files": "( ../CLEAN_READS/M-RNA/9PM-1-mRNA_1.fastq, ../CLEAN_READS/M-RNA/9PM-1-mRNA_2.fastq )",
+    "expected_format": "ISF",
+    "compatible_fragment_ratio": 0.5331411599055712,
+    "num_compatible_fragments": 152215,
+    "num_assigned_fragments": 285506,
+    "num_consistent_mappings": 155507,
+    "num_inconsistent_mappings": 137729,
+    "MSF": 0,
+    "OSF": 49,
+    "ISF": 155507,
+    "MSR": 0,
+    "OSR": 49,
+    "ISR": 50404,
+    "SF": 31947,
+    "SR": 55271,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}

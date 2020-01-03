@@ -222,11 +222,11 @@ def length_legend(ax):
 	legend_elements = []
 	for taxon in range(12):
 		legend_elements.append(Patch(facecolor="w", edgecolor="w", label="    ", linewidth=1))
-	ax.legend(handles=legend_elements, loc="lower right", framealpha=1, frameon=True, facecolor='w', ncol=2, columnspacing=1, handlelength=1, prop={'size': label_font})
+	ax.legend(handles=legend_elements, loc="lower right", framealpha=1, frameon=True, facecolor='w', ncol=2, columnspacing=1, handlelength=1, prop={'size': 8.5})
 
-	x=90
-	y=0.18
-	ax.text(x-10, y+0.2, "Contig length:", fontsize=label_font, verticalalignment='center', zorder=10)
+	x=75
+	y=0.15
+	ax.text(x-10, y+0.2, "Contig length", fontsize=label_font, verticalalignment='center', zorder=10)
 	for s in [100000, 30000, 10000, 3000]:
 		ax.scatter(x, y, s=s/500, alpha=0.5, c='b', zorder=10)
 		ax.text(x*1.2, y, str(s/1000)+"kb", fontsize=label_font, verticalalignment='center', zorder=10)
@@ -238,12 +238,12 @@ def expression_legend(ax):
 	legend_elements = []
 	for taxon in range(8):
 		legend_elements.append(Patch(facecolor="w", edgecolor="w", label="                     ", linewidth=1))
-	ax.legend(handles=legend_elements, loc="lower center", framealpha=1, frameon=True, facecolor='w', ncol=2, columnspacing=1, handlelength=1, prop={'size': label_font})
+	ax.legend(handles=legend_elements, loc="lower center", framealpha=1, frameon=True, facecolor='w', ncol=2, columnspacing=1, handlelength=1, prop={'size': 7})
 
 	# make the circle legend
 	x=0.4
 	y=0.35
-	ax.text(x-0.15, y+0.15, "Total transcript contribution:", fontsize=label_font, verticalalignment='center', zorder=10)
+	ax.text(x-0.2, y+0.2, "Total transcript contribution:", fontsize=label_font, verticalalignment='center', zorder=10)
 	for s in [30000, 10000, 3000, 1000]:
 		ax.scatter(x, y, s=s/100, alpha=0.5, c='b', zorder=10)
 		ax.text(x, y-0.18, str(s)+"tpm", fontsize=axis_font, horizontalalignment="right", verticalalignment='center', rotation=30, zorder=10)
@@ -268,7 +268,7 @@ font = {'family': 'arial', 'weight': 'normal', 'size': 12}
 plt.rc('font', **font)
 
 sns.set_palette("colorblind")
-fig = plt.figure(figsize=(9, 12), dpi=300)
+fig = plt.figure(figsize=(6, 8), dpi=300)
 
 axis_font=8
 label_font=10
@@ -321,6 +321,5 @@ color_legend(ax5)
 ##################   FINISHING PLOT   ######################
 
 #plt.subplots_adjust(left=0.1, right=0.95, top=0.9, bottom=0.1)
-plt.savefig("figure_2.png", dpi=300)
-#plt.savefig("figure_S2.eps", dpi=300)
+plt.savefig("figure.png", dpi=300)
 #plt.show()

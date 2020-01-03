@@ -35,7 +35,7 @@ def insert_png(filename, ax):
 	ax.set_title(filename.split(".")[0], fontsize=title_font)
 
 
-def manual_png(img, x, y):
+def manual_png(img, x, y, resize):
 	folder = os.path.dirname(os.path.realpath(__file__))
 	im = Image.open(folder + "/" + img)
 
@@ -44,6 +44,8 @@ def manual_png(img, x, y):
 	w = im.size[0]
 
 	resize_ratio = min(plot_h/h, plot_w/w)
+	print resize_ratio
+	resize_ratio = resize
 	h*=resize_ratio
 	w*=resize_ratio
 
@@ -71,7 +73,7 @@ font = {'family': 'arial', 'weight': 'normal', 'size': 12}
 plt.rc('font', **font)
 
 sns.set_palette("colorblind")
-fig = plt.figure(figsize=(8, 3.5), dpi=300)
+fig = plt.figure(figsize=(7, 3.5), dpi=300)
 
 axis_font=8
 label_font=10
@@ -81,14 +83,14 @@ heading_font=16
 ##################   DRAW KRONAS   ######################
 
 print "adding kronagram figures..."
-manual_png("krona_dna.png", 0.05 * fig.bbox.xmax/2, 0.90)
-manual_png("krona_rna.png", 1.0 * fig.bbox.xmax/2, 0.5)
+manual_png("krona_dna.png", 0.01 * fig.bbox.xmax/2, 0.90, 0.87)
+manual_png("krona_rna.png", 1.0 * fig.bbox.xmax/2, 0.3, 0.87)
 add_labels(["A", "B"])
 
 
 ##################   FINISHING PLOT   ######################
 
 #plt.subplots_adjust(left=0.1, right=0.95, top=0.9, bottom=0.1)
-plt.savefig("figure_1.png", dpi=300)
+plt.savefig("figure.png", dpi=300)
 #plt.savefig("figure_S2.eps", dpi=300)
 #plt.show()

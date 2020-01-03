@@ -9,6 +9,11 @@ for line in open("contig_taxonomy.tab"):
 	if len(cut)>1:
 		taxonomy[cut[0]]="root;"+";".join(cut[1].split(";")[:6])
 
+# load alga contigs
+for line in open("alga_contigs.list"):
+	contig = line.strip()
+	taxonomy[contig] = "root;Eukaryota;Chlorophyta;Mamiellophyceae;Dolichomastigales;Dolichomastigaceae;Dolichomastix"
+
 # load salmon abundances
 summary={}
 tot_abund=0
