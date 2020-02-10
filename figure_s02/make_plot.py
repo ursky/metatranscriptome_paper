@@ -60,6 +60,10 @@ def load_data(filename):
 		if farenheit==True:
 			temp = (temp-32) * (5.0/9.0)
 		humi = float(cut[3])
+		if len(cut)==5:
+			par = float(cut[4])
+		else:
+			par = 0
 
 		if day.split('-')[1]!="02":
 			continue
@@ -68,8 +72,10 @@ def load_data(filename):
 		if hour in data[day]:
 			temp = (temp+data[day][hour][0])/2
 			humi = (humi+data[day][hour][1])/2
-		data[day][hour]=(temp, humi)	
+			par = (par+data[day][hour][2])/2
+		data[day][hour]=(temp, humi, par)
 	return data
+
 	
 
 
@@ -77,12 +83,20 @@ def get_average_day(data):
 	hours=[]
 	temps=[]
 	humis=[]
+	pars=[]
 	for day in data:
 		for hour in sorted(data[day]):
 			hours.append(float(hour))
 			temps.append(data[day][hour][0])
 			humis.append(data[day][hour][1])
-	return sorted(hours), [x for _,x in sorted(zip(hours,temps))], [x for _,x in sorted(zip(hours,humis))]
+			pars.append(data[day][hour][2])
+	# adjust for GMT
+	for i,hour in enumerate(hours):
+		hour -= 2
+		if hour<0:
+			hour += 24
+		hours[i] = hour
+	return sorted(hours), [x for _,x in sorted(zip(hours,temps))], [x for _,x in sorted(zip(hours,humis))], [x for _,x in sorted(zip(hours,pars))]
 
 
 def plot_data (xs, ys, color, ax):
@@ -106,41 +120,52 @@ def fit(xs, ys):
 	return est
 
 def plot_temp(data, color, ax):
-	hours, temps, humis = get_average_day(data)
+	hours, temps, humis, pars = get_average_day(data)
 	plot_data(hours, temps, color, ax)
 	
 
 def plot_humi(data, color, ax):
-	hours, temps, humis = get_average_day(data)
+	hours, temps, humis, pars = get_average_day(data)
 	plot_data(hours, humis, color, ax)
 	ax.set_ylim(0,100)
 
+def plot_par(data, color, ax):
+	hours, temps, humis, pars = get_average_day(data)
+	plot_data(hours, pars, color, ax)
 
-
-data = load_data("SG1_Top_2017-2018.csv")
+data_2017 = load_data("SG1_Top_2017-2018.csv")
+data_2018 = load_data("SG1_Top_2018.csv")
 
 # plotting set-up
 font = {'family': 'arial', 'weight': 'normal', 'size': 12}
 plt.rc('font', **font)
 plt.rc('font', family='arial')
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(6,6))
+fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(6,9))
 
 print "plotting temperature..."
-plot_temp(data, "k", ax1)
+plot_temp(data_2017, "k", ax1)
 print "plotting humidity..."
-plot_humi(data, "k", ax2)
+plot_humi(data_2017, "k", ax2)
+print "plotting PAR..."
+plot_par(data_2018, "k", ax3)
 
 
 ax1.set_xlabel("Time after midnight (h)")
 ax2.set_xlabel("Time after midnight (h)")
+ax3.set_xlabel("Time after midnight (h)")
 ax1.set_ylabel("Temperature ($^\circ$C)")
 ax2.set_ylabel("Relative humidity (%)")
+
+ax3.set_ylabel(r'PAR ($\frac {\mu mol \ photons}{sm^2}$)')
+
 ax1.grid(ls="--", c="k", alpha=0.2)
 ax2.grid(ls="--", c="k", alpha=0.2)
+ax3.grid(ls="--", c="k", alpha=0.2)
 
 
-ax1.annotate("A.", xy=(-0.13, 0.93), xycoords="axes fraction", fontsize=20)
-ax2.annotate("B.", xy=(-0.13, 0.93), xycoords="axes fraction", fontsize=20)
+ax1.annotate("A.", xy=(-0.18, 0.93), xycoords="axes fraction", fontsize=20)
+ax2.annotate("B.", xy=(-0.18, 0.93), xycoords="axes fraction", fontsize=20)
+ax3.annotate("C.", xy=(-0.18, 0.93), xycoords="axes fraction", fontsize=20)
 
 plt.tight_layout()
 plt.savefig("figure.png", dpi=300)
