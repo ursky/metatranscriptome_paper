@@ -291,7 +291,9 @@ for sample in df.columns.values:
 
 print df
 print df.shape
-g = sns.clustermap(df, figsize=(5,8), col_colors=lut, col_cluster=True, row_cluster=True, yticklabels=True, xticklabels=True, cmap="magma", method="weighted")
+g = sns.clustermap(df, figsize=(5,8), col_colors=lut, col_cluster=True, row_cluster=True, yticklabels=True, xticklabels=False, cmap="magma", method="weighted")
+ax = g.ax_col_colors.axes
+ax.text(3.6,0.85,"DNA               RNA", color="w", fontsize=18)
 
 
 #plt.savefig("figure_4.png", bbox_inches='tight', dpi=300)

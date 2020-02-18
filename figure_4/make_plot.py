@@ -270,8 +270,8 @@ for ax in [ax2, ax4]:
 
 # add labels
 ax = fig.add_axes([0,0,1,1])
-ax.text(0.52, 0.95, "Pathway Abundance in Metagenome", horizontalalignment='center', fontsize=16)
-ax.text(0.52, 0.47, "Pathway Expression in Metatranscriptome", horizontalalignment='center', fontsize=16)
+ax.text(0.45, 0.95, "Pathway Abundance in Metagenome", horizontalalignment='center', fontsize=16)
+ax.text(0.46, 0.47, "Pathway Expression in Metatranscriptome", horizontalalignment='center', fontsize=16)
 ax.text(0.03, 0.95, "A", horizontalalignment='center', fontsize=24)
 ax.text(0.03, 0.47, "B", horizontalalignment='center', fontsize=24)
 ax.text(0.45, 0.06, "Pathways", horizontalalignment='center', fontsize=14)
