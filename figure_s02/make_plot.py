@@ -156,7 +156,7 @@ ax3.set_xlabel("Time after midnight (h)")
 ax1.set_ylabel("Temperature ($^\circ$C)")
 ax2.set_ylabel("Relative humidity (%)")
 
-ax3.set_ylabel(r'PAR ($\frac {\mu mol \ photons}{sm^2}$)')
+ax3.set_ylabel(r'PAR ($ {\mu mol \ }{s^{-1}m^{-2}}$)')
 
 ax1.grid(ls="--", c="k", alpha=0.2)
 ax2.grid(ls="--", c="k", alpha=0.2)
